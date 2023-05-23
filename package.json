@@ -1,0 +1,34 @@
+{
+  "name": "inventory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "migrate": "npm run build && sequelize-cli db:migrate",
+    "seed": "npm run build && sequelize-cli db:seed:all",
+    "drop": "npm run build && sequelize-cli db:migrate:undo:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron-time-generator": "^1.3.2",
+    "fastify": "4.17.0",
+    "jsonwebtoken": "9.0.0",
+    "mysql2": "3.3.1",
+    "node-cron": "3.0.2",
+    "reflect-metadata": "0.1.13",
+    "sequelize": "6.31.1",
+    "sequelize-typescript": "2.1.5"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "9.0.2",
+    "@types/node": "20.2.3",
+    "@types/node-cron": "3.0.7",
+    "@types/validator": "13.7.17",
+    "sequelize-cli": "6.6.0",
+    "ts-node": "10.9.1",
+    "typescript": "5.0.4"
+  }
+}
