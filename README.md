@@ -61,10 +61,6 @@ A postman collection has been added for all the basic operations.
 - The application is designed with scalability in mind, allowing for the database schema to be expanded upon in the future.
 - Please note that all operations are for admin roles only, except for adding UserProductCounts to CountExecution, which is also allowed for counter roles.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
 ## Author
 
 [Nikolaos Tsiougkranas](https://github.com/Nikos-Tsiougranas)
