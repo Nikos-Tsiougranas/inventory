@@ -27,8 +27,8 @@ To install and run the application, follow these steps:
 2. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/inventory-count-api.git
-    cd inventory-count-api
+    git clone git@github.com:Nikos-Tsiougranas/inventory.git
+    cd inventory
     ```
 
 3. Build the Docker image and run it(It will run all the migrations and seeds :
