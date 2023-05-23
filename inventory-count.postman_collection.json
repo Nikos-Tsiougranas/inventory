@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "451c6860-22ff-4f30-ae99-08281a95bd66",
+		"name": "inventory-count",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6623270"
+	},
+	"item": [
+		{
+			"name": "sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"adminPass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addweeklyplan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODY2ODI1LCJleHAiOjE2ODQ4NzA0MjV9.EsDhqJsDul2I9mD7oMB8p0phXa2iPFPy0AV5fkTi1I4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abc\",\r\n    \"ownerId\": 1,\r\n    \"day\": \"sunday\",\r\n    \"usersToNotify\": [2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/count-plan/weekly",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"count-plan",
+						"weekly"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addbiweeklyplan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODY2OTc0LCJleHAiOjE2ODQ4NzA1NzR9.yg-VXsI-QDS2Ty0tatdsn3eOaLA78Ej1ud7TXGM1GpU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"abcd\",\r\n    \"ownerId\": 1,\r\n    \"usersToNotify\": [2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/count-plan/bi-weekly/monday",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"count-plan",
+						"bi-weekly",
+						"monday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODcyOTY3LCJleHAiOjE2ODQ4NzY1Njd9.5UQ2Hlceev7rhX_MTCqkkTko1f-HQnsHWciLPecfIhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"book\",\r\n    \"price\": 12,\r\n    \"category\": \"books\",\r\n    \"subProducts\": [{\r\n        \"name\": \"pages\",\r\n        \"quantity\": 1000,\r\n        \"barcodes\": [\"100\"]\r\n    },{\r\n        \"name\": \"cover\",\r\n        \"quantity\": 2,\r\n        \"barcodes\": [\"101\"]\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "start countplan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODY5MzM1LCJleHAiOjE2ODQ4NzI5MzV9.usYU_6p-zHUHlXk1_JA80QT1P5S27tMsDSyUXRr3CPg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/count-plan/4/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"count-plan",
+						"4",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "end countplan",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODY5MzM1LCJleHAiOjE2ODQ4NzI5MzV9.usYU_6p-zHUHlXk1_JA80QT1P5S27tMsDSyUXRr3CPg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/count-plan/1/end",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"count-plan",
+						"1",
+						"end"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user product count",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODcyOTY3LCJleHAiOjE2ODQ4NzY1Njd9.5UQ2Hlceev7rhX_MTCqkkTko1f-HQnsHWciLPecfIhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countExecutionId\": 10,\r\n    \"subProducts\": [{\r\n        \"id\": 5,\r\n        \"quantity\": 2000\r\n    }, {\r\n        \"id\": 6,\r\n        \"quantity\": 4\r\n    }],\r\n    \"ownerId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countplan/product-count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countplan",
+						"product-count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODcyOTY3LCJleHAiOjE2ODQ4NzY1Njd9.5UQ2Hlceev7rhX_MTCqkkTko1f-HQnsHWciLPecfIhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countexecution/10/productprice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countexecution",
+						"10",
+						"productprice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODcyOTY3LCJleHAiOjE2ODQ4NzY1Njd9.5UQ2Hlceev7rhX_MTCqkkTko1f-HQnsHWciLPecfIhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countexecution/10/categoryprice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countexecution",
+						"10",
+						"categoryprice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "total price",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjg0ODcyOTY3LCJleHAiOjE2ODQ4NzY1Njd9.5UQ2Hlceev7rhX_MTCqkkTko1f-HQnsHWciLPecfIhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/countexecution/10/totalprice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countexecution",
+						"10",
+						"totalprice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
