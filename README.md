@@ -39,6 +39,9 @@ To install and run the application, follow these steps:
 
 ## API Documentation
 
+### PostMan Collection
+A postman collection has been added for all the basic operations.
+
 ### Endpoints
 
 - `POST /sign-in`: Sign in with either admin(admin, adminPass) or counter (counter1, counterPass).
