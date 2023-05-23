@@ -18,6 +18,7 @@ This is an API for an Inventory Count System. It's designed to manage inventory 
 - Docker
 - Fastify
 - Node-cron for the scheduled job
+- Sequelize(ORM)
 
 ## Installation
 
