@@ -35,7 +35,8 @@ To install and run the application, follow these steps:
 3. Build the Docker image and run it(It will run all the migrations and seeds :
 
     ```bash
-    docker-compose up --build web
+    docker-compose up --build web 
+    (I had an issue with docker-entrypoint.sh due to windows new line. If this error occurs `inventory-web-1  | exec ./docker-entrypoint.sh: no such file or directory` then add a line at the end of docker-entrypoint.sh and try again)
     ```
 
 ## API Documentation
